@@ -10,6 +10,8 @@ import axios from 'axios';
 import { Context } from '../../context/Context';
 
 
+
+
 export default function Onepost() {
     const location = useLocation()
     const id = location.pathname.split("/")[2] //to extract the postID out of the pathname
