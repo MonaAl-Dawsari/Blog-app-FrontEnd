@@ -15,7 +15,11 @@ export default function Onepost() {
     const id = location.pathname.split("/")[2] //to extract the postID out of the pathname
     const [post, setPost] = useState({});
     const PF = "http://localhost:5000/images/";
-    const {user} = useContext(Context)
+    const {user} = useContext(Context);
+    const [title,setTitle]=useState("")
+    const [desc,setDesc]=useState("")
+    const [updateMode,setUpdateMode]=useState(false)
+
 
     useEffect(() => {
         const onePost = async () => {
@@ -45,17 +49,24 @@ export default function Onepost() {
                     <img className="onePostImg"
                         src={PF + post.photo}
                         alt="" />
-                )}
+                )}{
+                    updateMode ? <input type="text" value={post.title} /> : (
 
-                <h1 className="onePostTitle">
+
+                        <h1 className="onePostTitle">
                     {post.title}
                     {post.username === user.username && (
                         <div className="edit">
-                            <i className="onePostIcon far fa-edit"></i>
+                            <i className="onePostIcon far fa-edit" onClick={()=>setUpdateMode(true)}></i>
                             <i className="onePostIcon far fa-trash-alt" onClick={handleDelete}></i>
                         </div>
                     )}
                 </h1>
+                
+                    )
+                }
+
+                
 
                 
                 <div className="onePostInfo">
