@@ -25,21 +25,33 @@ export default function Onepost() {
         const onePost = async () => {
             const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id ,{data:{username:user.username}});
             setPost(res.data);
-            //   setTitle(res.data.title);
-            //   setDesc(res.data.desc);
+            setTitle(res.data.title);
+            setDesc(res.data.desc);
         };
         onePost();
     }, [id]);
     const handleDelete = async ()=>{
         try {
             await axios.delete("http://localhost:5000/blog/v1/posts/"+id)
-            window.location.replace("/posts/");
+            //window.location.replace("/posts/");
+            updateMode (false)
         }catch(err){
 
         }
     }
     console.log(post);
+    const handleUpdate = async ()=>{
+        try {
+            await axios.put("http://localhost:5000/blog/v1/posts/"+id ,{username:user.username, title,desc})
+            window.location.reload();
+        }catch(err){
+
+        }
+
+    }
     return (
+
+        
 
         <div className="onePost">
             <Sidebar />
@@ -50,11 +62,11 @@ export default function Onepost() {
                         src={PF + post.photo}
                         alt="" />
                 )}{
-                    updateMode ? <input type="text" value={post.title} /> : (
+                    updateMode ? <input type="text" value={title} className="onePostTitle" onChange={(e)=>setTitle(e.target.value)} /> : (
 
 
                         <h1 className="onePostTitle">
-                    {post.title}
+                    {title}
                     {post.username === user.username && (
                         <div className="edit">
                             <i className="onePostIcon far fa-edit" onClick={()=>setUpdateMode(true)}></i>
@@ -80,9 +92,14 @@ export default function Onepost() {
                     <span className="onePostDate">{new Date(post.createdAt).toDateString()}</span>
 
                 </div>
+                {updateMode ? ( <textarea className="onePostDescInput"  value={desc} onChange={(e)=>setDesc(e.target.value)}/> ) : (
+                <p className="onePostDesc">{desc}
+                </p>)}
 
-                <p className="onePostDesc">{post.desc}
-                </p>
+                {updateMode && (
+                     <button className="onePostButton" onClick={handleUpdate}>Update</button>
+                ) }
+               
             </div>
 
 
