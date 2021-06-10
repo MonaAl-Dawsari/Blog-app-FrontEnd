@@ -11,11 +11,13 @@ import Profile from './Pages/user/Profile';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Context } from './context/Context';
 import {useContext} from 'react';
+import { CurrentUserProvider } from "./CurrentUserContext"
 
 function App() {
   const {user} = useContext(Context);
   return (
     <div className="App">
+      <CurrentUserProvider>
      <Router>
      <Navbar/>
       <Switch>
@@ -36,6 +38,7 @@ function App() {
       </Switch>
     </Router>
     <Footer/>
+    </CurrentUserProvider>
     </div>
   );
 }
