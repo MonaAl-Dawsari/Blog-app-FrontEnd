@@ -9,6 +9,8 @@ import '../css/nav.css'
 export default function Navbar() {
   //fake user
   const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/"
+  
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
    
@@ -48,7 +50,7 @@ export default function Navbar() {
       <div className="topRight">
         {user ? (
             <Link to="/profile">
-              <img className="topImg" src={user.profileImg}alt=""/>
+              <img className="topImg" src={PF + user.profileImg}alt=""/>
             </Link>
           
           ) : (
