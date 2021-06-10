@@ -3,6 +3,7 @@ import "../../css/newpost.css"
 import { useContext, useState } from "react";
 import axios from "axios";
 import { Context } from '../../context/Context';
+import Sidebar from '../../Components/Sidebar';
 
 export default function Newpost() {
   const [title, setTitle] = useState("");
@@ -24,17 +25,21 @@ export default function Newpost() {
       data.append("file", file);
       newPost.photo = filename;
       try {
-        await axios.post("http://localhost:5001/blog/v1/upload", data);
+        await axios.post("http://localhost:5000/blog/v1/upload", data);
       } catch (err) { }
     }
     try {
-      const res = await axios.post("http://localhost:5001/blog/v1/posts/create", newPost);
+      const res = await axios.post("http://localhost:5000/blog/v1/posts/create", newPost);
       window.location.replace("/post/" + res.data._id);
     } catch (err) { } 
   };
 
   return (
+
+    <div className="home">
+    
     <div className="new">
+      
       {file && (
       <img className="blogImg" alt="" src={URL.createObjectURL(file)} />
       )}
@@ -60,6 +65,8 @@ export default function Newpost() {
           Publish
         </button>
       </form>
+    </div>
+    <Sidebar />
     </div>
   )
 }

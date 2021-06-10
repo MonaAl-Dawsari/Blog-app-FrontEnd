@@ -14,18 +14,27 @@ export default function Onepost() {
     const location = useLocation()
     const id = location.pathname.split("/")[2] //to extract the postID out of the pathname
     const [post, setPost] = useState({});
-    const PF = "http://localhost:5001/images/";
+    const PF = "http://localhost:5000/images/";
     const {user} = useContext(Context)
 
     useEffect(() => {
         const onePost = async () => {
-            const res = await axios.get("http://localhost:5001/blog/v1/posts/" + id);
+            const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id ,{data:{username:user.username}});
             setPost(res.data);
             //   setTitle(res.data.title);
             //   setDesc(res.data.desc);
         };
         onePost();
     }, [id]);
+    const handleDelete = async ()=>{
+        try {
+            await axios.delete("http://localhost:5000/blog/v1/posts/"+id)
+            window.location.replace("/posts/");
+        }catch(err){
+
+        }
+    }
+    console.log(post);
     return (
 
         <div className="onePost">
@@ -43,7 +52,7 @@ export default function Onepost() {
                     {post.username === user.username && (
                         <div className="edit">
                             <i className="onePostIcon far fa-edit"></i>
-                            <i className="onePostIcon far fa-trash-alt"></i>
+                            <i className="onePostIcon far fa-trash-alt" onClick={handleDelete}></i>
                         </div>
                     )}
                 </h1>
