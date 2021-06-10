@@ -1,0 +1,70 @@
+.new {
+    padding-top: 50px;
+  }
+  
+  .blogImg {
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .newForm {
+    position: relative;
+  }
+  
+  .newPost {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+  }
+   
+  .writeIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    color: rgb(27, 231, 204);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .titleStyle {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+  }
+  
+  .titleText::placeholder {
+    color: rgb(199, 76, 76);
+    font-weight: 90%;
+  }
+  
+  .titleStyle:focus {
+    outline-style: none;
+  }
+  
+  .writeText {
+    width: 70vw;
+    height: 100vh;
+    font-family: inherit;
+    font-size: 20px;
+  }
+  
+  .btnSubmit {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
