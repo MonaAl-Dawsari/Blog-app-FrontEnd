@@ -16,22 +16,22 @@ export default function Navbar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+    
+
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
-              HOME
+            
+            <Link className="link" to="/posts">
+            HOME
             </Link>
           </li>
           <li className="topListItem">ABOUT</li>
           <li className="topListItem">
-            <Link className="link" to="/posts">
-              ALL POST
+            
+            <Link className="link" to={`/posts/?user=${user}`}>
+              My Posts
             </Link>
           </li>
           <li className="topListItem">

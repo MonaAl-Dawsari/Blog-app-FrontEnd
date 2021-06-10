@@ -51,10 +51,10 @@ export default function Onepost() {
     }
     return (
 
-        
+        <div className="home">      
 
         <div className="onePost">
-            <Sidebar />
+            
             <div className="onePostWrapper">
                 {post.photo && (
 
@@ -105,6 +105,8 @@ export default function Onepost() {
 
 
         </div>
+        <Sidebar />
+        </div>  
     )
 }
 
