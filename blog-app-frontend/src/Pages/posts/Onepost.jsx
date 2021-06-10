@@ -47,9 +47,16 @@ export default function Onepost() {
                         </div>
                     )}
                 </h1>
+
+                
                 <div className="onePostInfo">
                     
-                    <span className="onePostAuthor"> {post.username}</span>
+
+
+                
+        <Link to={`/posts/?user=${post.username}`} className="link">
+                    <span className=""> {post.username}</span>
+        </Link>
                     <span className="onePostDate">{new Date(post.createdAt).toDateString()}</span>
 
                 </div>
