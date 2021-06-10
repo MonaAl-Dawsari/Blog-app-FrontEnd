@@ -4,6 +4,7 @@ import Sidebar from '../../Components/Sidebar'
 import React, { useContext } from 'react'
 import "../../css/Onepost.css"
 import { useLocation } from 'react-router'
+import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Context } from '../../context/Context';
@@ -13,12 +14,12 @@ export default function Onepost() {
     const location = useLocation()
     const id = location.pathname.split("/")[2] //to extract the postID out of the pathname
     const [post, setPost] = useState({});
-    const PF = "http://localhost:5000/images/";
+    const PF = "http://localhost:5001/images/";
     const {user} = useContext(Context)
 
     useEffect(() => {
         const onePost = async () => {
-            const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id);
+            const res = await axios.get("http://localhost:5001/blog/v1/posts/" + id);
             setPost(res.data);
             //   setTitle(res.data.title);
             //   setDesc(res.data.desc);
@@ -47,6 +48,7 @@ export default function Onepost() {
                     )}
                 </h1>
                 <div className="onePostInfo">
+                    
                     <span className="onePostAuthor"> {post.username}</span>
                     <span className="onePostDate">{new Date(post.createdAt).toDateString()}</span>
 
