@@ -1,13 +1,12 @@
 // not auther >> see post and add comment
 //auther >> can delete update her/his post\\
-import Sidebar from '../../Components/Sidebar'
 import React, { useContext } from 'react'
 import "../../css/Onepost.css"
 import { useLocation } from 'react-router'
-import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Context } from '../../context/Context';
+ 
 
 
 export default function Onepost() {
@@ -29,8 +28,7 @@ export default function Onepost() {
     return (
 
         <div className="onePost">
-            <Sidebar />
-            <div className="onePostWrapper">
+             <div className="onePostWrapper">
                 {post.photo && (
 
                     <img className="onePostImg"
@@ -57,9 +55,6 @@ export default function Onepost() {
                 <p className="onePostDesc">{post.desc}
                 </p>
             </div>
-
-
-
         </div>
     )
 }
