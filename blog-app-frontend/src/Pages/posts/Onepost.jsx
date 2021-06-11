@@ -14,7 +14,7 @@ import { Context } from '../../context/Context';
 
 export default function Onepost() {
     const location = useLocation()
-    const id = location.pathname.split("/")[2] //to extract the postID out of the pathname
+    const id = location.pathname.split("/")[2] ;//to extract the postID out of the pathname
     const [post, setPost] = useState({});
     const PF = "http://localhost:5000/images/";
     const {user} = useContext(Context);
@@ -55,24 +55,24 @@ export default function Onepost() {
 
         <div className="home">      
 
-        <div className="onePost">
+        <div className="singlePost">
             
-            <div className="onePostWrapper">
+            <div className="singlePostWrapper">
                 {post.photo && (
 
-                    <img className="onePostImg"
+                    <img className="singlePostImg"
                         src={PF + post.photo}
                         alt="" />
                 )}{
-                    updateMode ? <input type="text" value={title} className="onePostTitle" onChange={(e)=>setTitle(e.target.value)} /> : (
+                    updateMode ? <input type="text" value={title} className="singlePostTitleInput" onChange={(e)=>setTitle(e.target.value)} /> : (
 
 
-                        <h1 className="onePostTitle">
+                        <h1 className="singlePostTitle">
                     {title}
                     {post.username === user.username && (
-                        <div className="edit">
-                            <i className="onePostIcon far fa-edit" onClick={()=>setUpdateMode(true)}></i>
-                            <i className="onePostIcon far fa-trash-alt" onClick={handleDelete}></i>
+                        <div className="singlePostEdit">
+                            <i className="singlePostIcon far fa-edit" onClick={()=>setUpdateMode(true)}></i>
+                            <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
                         </div>
                     )}
                 </h1>
@@ -83,7 +83,7 @@ export default function Onepost() {
                 
 
                 
-                <div className="onePostInfo">
+                <div className="singlePostInfo">
                     
 
 
@@ -91,15 +91,15 @@ export default function Onepost() {
         <Link to={`/posts/?user=${post.username}`} className="link">
                     <span className=""> {post.username}</span>
         </Link>
-                    <span className="onePostDate">{new Date(post.createdAt).toDateString()}</span>
+                    <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
 
                 </div>
-                {updateMode ? ( <textarea className="onePostDescInput"  value={desc} onChange={(e)=>setDesc(e.target.value)}/> ) : (
-                <p className="onePostDesc">{desc}
+                {updateMode ? ( <textarea className="singlePostDescInput"  value={desc} onChange={(e)=>setDesc(e.target.value)}/> ) : (
+                <p className="singlePostDesc">{desc}
                 </p>)}
 
                 {updateMode && (
-                     <button className="onePostButton" onClick={handleUpdate}>Update</button>
+                     <button className="singlePostButton" onClick={handleUpdate}>Update</button>
                 ) }
                
             </div>
