@@ -32,7 +32,7 @@ export default function Navbar() {
           <li className="topListItem">
             
             <Link className="link" to={`/posts/?user=${user}`}>
-              My Posts
+              MY POSTS
             </Link>
           </li>
           <li className="topListItem">

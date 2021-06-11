@@ -2,7 +2,6 @@ import './App.css';
 import Onepost from "./Pages/posts/Onepost";
 import Newpost from "./Pages/posts/Newpost";
 import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
 import Allposts from './Pages/posts/Allposts';
 import Home from './Pages/home/Home';
 import Register from './Pages/user/Register';
@@ -29,7 +28,7 @@ function App() {
         </Route>
         <Route path="/register">
           {user ? <Home /> : <Register />}</Route>
-        <Route path="/login"> {user ? <Home /> : <Login />}</Route>
+        <Route path="/login"> {user ? <Allposts /> : <Login />}</Route>
         <Route path="/post/:id">
           <Onepost />   </Route>
         <Route path="/addpost">{user ? <Newpost /> : <Login />}</Route>
@@ -37,7 +36,6 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    <Footer/>
     </CurrentUserProvider>
     </div>
   );
