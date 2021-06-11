@@ -85,7 +85,7 @@ export default function Onepost() {
 
 
                 
-        <Link to={`/posts/?user=${post.username}`} className="link">
+        <Link to={`/?user=${post.username}`} className="link">
                     <span className=""> {post.username}</span>
         </Link>
                     <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
