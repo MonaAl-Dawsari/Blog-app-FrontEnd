@@ -5,6 +5,8 @@ import Posts from '../../Components/Posts'
  import axios from 'axios';
 import Sidebar from '../../Components/Sidebar'
 import RingLoader from "react-spinners/RingLoader";
+import Header from '../../Components/Header';
+
 
  export default function Allposts() {
   const [posts, setPosts] = useState([]);
@@ -28,8 +30,9 @@ import RingLoader from "react-spinners/RingLoader";
   }, [ search]);
   return (
     <>
-      
+      <Header/>
       <div className="home">
+      
       {
         loading ? 
 

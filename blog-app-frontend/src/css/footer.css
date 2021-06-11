@@ -1,10 +1,14 @@
-/* just to show components on the web */
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: red;
-    color: white;
-    text-align: center;
-  }
+
+.footer-dark {
+  padding: 50px 0;
+  color: rgb(0, 0, 0);
+  background-color: #06d6a0;
+}
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 10px;
+  /* opacity: 0.3; */
+  font-size: 20px;
+  margin-bottom: 0;
+ 
+}
