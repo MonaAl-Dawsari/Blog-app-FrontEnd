@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import { useContext } from 'react';
 import "../css/post.css";
+import { Context } from "../context/Context";
+import { useState, useEffect } from 'react';
+//import { useContext } from 'react';
 
 export default function Post(props) {
+  //const {user} = useContext(Context);
   const PF = "http://localhost:5000/images/";
   console.log(props)
   return (

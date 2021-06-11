@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 export default function Onepost() {
     const location = useLocation()
-    const id = location.pathname.split("/")[2] //to extract the postID out of the pathname
+    const id = location.pathname.split("/")[2] ;//to extract the postID out of the pathname
     const [post, setPost] = useState({});
     const PF = "http://localhost:5000/images/";
     const { user } = useContext(Context);
@@ -50,50 +50,60 @@ export default function Onepost() {
     }
     return (
 
-        <div className="home">
+        <div className="home">      
 
-            <div className="onePost">
+        <div className="singlePost">
+            
+            <div className="singlePostWrapper">
+                {post.photo && (
 
-                <div className="onePostWrapper">
-                    {post.photo && (
-
-                        <img className="onePostImg"
-                            src={PF + post.photo}
-                            alt="" />
-                    )}{
-                        updateMode ? <input type="text" value={title} className="onePostTitle" onChange={(e) => setTitle(e.target.value)} /> : (
+                    <img className="singlePostImg"
+                    src={PF + post.photo}
+                        alt="" />
+                )}{
+                    updateMode ? <input type="text" value={title} className="singlePostTitleInput" onChange={(e)=>setTitle(e.target.value)} /> : (
 
 
-                            <h1 className="onePostTitle">
-                                {title}
-                                {post.username === user.username && (
-                                    <div className="edit">
-                                        <i className="onePostIcon far fa-edit" onClick={() => setUpdateMode(true)}></i>
-                                        <i className="onePostIcon far fa-trash-alt" onClick={handleDelete}></i>
-                                    </div>
-                                )}
-                            </h1>
-
-                        )
-                    }
-                    <div className="onePostInfo">
-                        <Link to={`/posts/?user=${post.username}`} className="link">
-                            <span className=""> {post.username}</span>
-                        </Link>
-                        <span className="onePostDate">{new Date(post.createdAt).toDateString()}</span>
-                    </div>
-                    {updateMode ? (<textarea className="onePostDescInput" value={desc} onChange={(e) => setDesc(e.target.value)} />) : (
-                        <p className="onePostDesc">{desc}
-                        </p>)}
-
-                    {updateMode && (
-                        <button className="onePostButton" onClick={handleUpdate}>Update</button>
+                        <h1 className="singlePostTitle">
+                    {title}
+                    {post.username === user.username && (
+                        <div className="singlePostEdit">
+                            <i className="singlePostIcon far fa-edit" onClick={()=>setUpdateMode(true)}></i>
+                            <i className="singlePostIcon far fa-trash-alt" onClick={handleDelete}></i>
+                        </div>
                     )}
+                </h1>
+                
+                    )
+                }
+
+                
+
+                
+                <div className="singlePostInfo">
+                    
+
+
+                
+        <Link to={`/posts/?user=${post.username}`} className="link">
+                    <span className=""> {post.username}</span>
+        </Link>
+                    <span className="singlePostDate">{new Date(post.createdAt).toDateString()}</span>
 
                 </div>
+                {updateMode ? ( <textarea className="singlePostDescInput"  value={desc} onChange={(e)=>setDesc(e.target.value)}/> ) : (
+                <p className="singlePostDesc">{desc}
+                </p>)}
+
+                {updateMode && (
+                     <button className="singlePostButton" onClick={handleUpdate}>Update</button>
+                ) }
+               
+            </div>
             </div>
             <Sidebar />
         </div>
+        
     )
 }
 

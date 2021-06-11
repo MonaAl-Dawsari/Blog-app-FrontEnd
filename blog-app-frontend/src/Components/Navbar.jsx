@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { Context } from '../context/Context';
+import { Context } from "../context/Context";
 import { useContext } from 'react';
 import '../css/nav.css'
 
@@ -31,17 +31,32 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="topListItem">ABOUT</li>
-          <li className="topListItem">
+
+          { user ? (
+            <>
+            <li className="topListItem">
+
             
-            <Link className="link" to={`/posts/?user=${user}`}>
-              MY POSTS
-            </Link>
-          </li>
-          <li className="topListItem">
+            {/**to={`/posts/?user=${user.username}`} */}
+                <Link className="link"  to={`/posts/?user=${user.username}`} >
+                  MY POSTS
+                </Link>
+              </li>
+
+              <li className="topListItem">
             <Link className="link" to="/addPost">
               NEW POST
             </Link>
           </li>
+              </>
+          ) :
+          ""
+}
+          
+
+
+
+          
           <li className="topListItem" onClick={handleLogout}>
             {user && "LOGOUT"}
           </li>
