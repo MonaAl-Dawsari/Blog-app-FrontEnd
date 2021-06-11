@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <div className="top">
       <div className="topLeft">
-    
+      <i className="topIcon"><img herf='..'></img></i>
 
       </div>
       <div className="topCenter">
@@ -30,7 +30,9 @@ export default function Navbar() {
             HOME
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
+          <li className="topListItem"><Link className="link" to="/ABOUT">
+            ABOUT
+            </Link></li>
           <li className="topListItem">
             
             <Link className="link" to={`/posts/?user=${user}`}>

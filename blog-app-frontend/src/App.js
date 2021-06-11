@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Context } from './context/Context';
 import {useContext} from 'react';
 import { CurrentUserProvider } from "./CurrentUserContext"
+import Footer from './Components/Footer'
 
 function App() {
   const {user} = useContext(Context);
@@ -37,6 +38,7 @@ function App() {
       </Switch>
     </Router>
     </CurrentUserProvider>
+    <Footer></Footer>
     </div>
   );
 }
