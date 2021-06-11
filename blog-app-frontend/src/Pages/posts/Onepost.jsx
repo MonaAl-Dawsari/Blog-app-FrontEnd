@@ -58,7 +58,7 @@ export default function Onepost() {
                 {post.photo && (
 
                     <img className="singlePostImg"
-                        src={PF + post.photo}
+                    src={PF + post.photo}
                         alt="" />
                 )}{
                     updateMode ? <input type="text" value={title} className="singlePostTitleInput" onChange={(e)=>setTitle(e.target.value)} /> : (
