@@ -1,52 +1,49 @@
 // not auther >> see post and add comment
 //auther >> can delete update her/his post\\
-import Sidebar from '../../Components/Sidebar'
 import React, { useContext } from 'react'
 import "../../css/Onepost.css"
 import { useLocation } from 'react-router'
-import { Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Context } from '../../context/Context';
-
-
-
+import Sidebar from '../../Components/Sidebar';
+import { Link } from "react-router-dom";
 
 export default function Onepost() {
     const location = useLocation()
     const id = location.pathname.split("/")[2] ;//to extract the postID out of the pathname
     const [post, setPost] = useState({});
     const PF = "http://localhost:5000/images/";
-    const {user} = useContext(Context);
-    const [title,setTitle]=useState("")
-    const [desc,setDesc]=useState("")
-    const [updateMode,setUpdateMode]=useState(false)
+    const { user } = useContext(Context);
+    const [title, setTitle] = useState("")
+    const [desc, setDesc] = useState("")
+    const [updateMode, setUpdateMode] = useState(false)
 
 
     useEffect(() => {
         const onePost = async () => {
-            const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id ,{data:{username:user.username}});
+            const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id, { data: { username: user.username } });
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
         };
         onePost();
     }, [id]);
-    const handleDelete = async ()=>{
+    const handleDelete = async () => {
         try {
-            await axios.delete("http://localhost:5000/blog/v1/posts/"+id)
+            await axios.delete("http://localhost:5000/blog/v1/posts/" + id)
             //window.location.replace("/posts/");
-            updateMode (false)
-        }catch(err){
+            updateMode(false)
+        } catch (err) {
 
         }
     }
     console.log(post);
-    const handleUpdate = async ()=>{
+    const handleUpdate = async () => {
         try {
-            await axios.put("http://localhost:5000/blog/v1/posts/"+id ,{username:user.username, title,desc})
+            await axios.put("http://localhost:5000/blog/v1/posts/" + id, { username: user.username, title, desc })
             window.location.reload();
-        }catch(err){
+        } catch (err) {
 
         }
 
@@ -103,12 +100,10 @@ export default function Onepost() {
                 ) }
                
             </div>
-
-
-
+            </div>
+            <Sidebar />
         </div>
-        <Sidebar />
-        </div>  
+        
     )
 }
 
