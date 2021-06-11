@@ -65,7 +65,7 @@ export default function Navbar() {
               </li>
             </ul>
           )}
-          <i className="topSearchIcon fas fa-search"></i>
+          
       </div>
       </div>
   );
