@@ -7,6 +7,7 @@ import Home from './Pages/home/Home';
 import Register from './Pages/user/Register';
 import Login from './Pages/user/Login';
 import Profile from './Pages/user/Profile';
+import Footer from './Components/Footer';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Context } from './context/Context';
 import {useContext} from 'react';
@@ -38,7 +39,9 @@ function App() {
       </Switch>
     </Router>
     </CurrentUserProvider>
-    <Footer></Footer>
+    <Footer/>
+
+    
     </div>
   );
 }

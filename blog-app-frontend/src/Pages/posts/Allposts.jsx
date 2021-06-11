@@ -4,7 +4,9 @@ import Posts from '../../Components/Posts'
  import { useLocation } from "react-router";
  import axios from 'axios';
 import Sidebar from '../../Components/Sidebar'
-import BeatLoader from "react-spinners/BeatLoader";
+import RingLoader from "react-spinners/RingLoader";
+import Header from '../../Components/Header';
+
 
  export default function Allposts() {
   const [posts, setPosts] = useState([]);
@@ -28,13 +30,14 @@ import BeatLoader from "react-spinners/BeatLoader";
   }, [ search]);
   return (
     <>
-      
+      <Header/>
       <div className="home">
+      
       {
         loading ? 
 
        <div className="sweet-loading">
-         <BeatLoader color={"#C63232"} loading={loading}  size={20} />
+         <RingLoader color={"#C63232"} loading={loading}  size={50} />
        </div> 
         
         :
