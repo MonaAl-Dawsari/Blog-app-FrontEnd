@@ -9,29 +9,32 @@ import '../css/nav.css'
 export default function Navbar() {
   //fake user
   const { user, dispatch } = useContext(Context);
+  const PF = "http://localhost:5000/images/"
+  
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
+   
   };
 
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
-        <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-twitter-square"></i>
+    
+
       </div>
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link className="link" to="/">
-              HOME
+            
+            <Link className="link" to="/posts">
+            HOME
             </Link>
           </li>
           <li className="topListItem">ABOUT</li>
           <li className="topListItem">
-            <Link className="link" to="/posts">
-              ALL POST
+            
+            <Link className="link" to={`/posts/?user=${user}`}>
+              MY POSTS
             </Link>
           </li>
           <li className="topListItem">
@@ -47,7 +50,7 @@ export default function Navbar() {
       <div className="topRight">
         {user ? (
             <Link to="/profile">
-              <img className="topImg" src={user.profileImg}alt=""/>
+              <img className="topImg" src={PF + user.profileImg}alt=""/>
             </Link>
           
           ) : (
@@ -64,7 +67,7 @@ export default function Navbar() {
               </li>
             </ul>
           )}
-          <i className="topSearchIcon fas fa-search"></i>
+          
       </div>
       </div>
   );

@@ -1,0 +1,12 @@
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sweet-loading{
+    
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

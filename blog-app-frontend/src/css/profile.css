@@ -1,49 +1,49 @@
-.settings {
+.profile {
     display: flex;
   }
   
-  .settingsWrapper {
+  .profileWrapper {
     flex: 9;
     padding: 20px;
   }
   
-  .settingsTitle {
+  .profileTitle {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .settingsUpdateTitle {
+  .profileUpdateTitle {
     font-size: 30px;
     margin-bottom: 20px;
     color: lightcoral;
   }
   
-  .settingsDeleteTitle {
+  .profileDeleteTitle {
     color: red;
     font-size: 12px;
     cursor: pointer;
   }
   
-  .settingsForm {
+  .profileForm {
     display: flex;
     flex-direction: column;
   }
   
-  .settingsPP {
+  .profilePP {
     display: flex;
     align-items: center;
     margin: 10px 0;
   }
   
-  .settingsPP > img {
+  .profilePP > img {
     width: 70px;
     height: 70px;
     border-radius: 20px;
     object-fit: cover;
   }
   
-  .settingsPPIcon {
+  .profilePPIcon {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -56,12 +56,12 @@
     cursor: pointer;
   }
   
-  .settingsForm > label {
+  .profileForm > label {
     font-size: 20px;
     margin-top: 20px;
   }
   
-  .settingsForm > input {
+  .profileForm > input {
     color: gray;
     margin: 10px 0;
     height: 30px;
@@ -69,7 +69,7 @@
     border-bottom: 1px solid lightgray;
   }
   
-  .settingsSubmit{
+  .profileSubmit{
       width: 150px;
       align-self: center;
       border: none;
