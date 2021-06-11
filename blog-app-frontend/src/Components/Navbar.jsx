@@ -34,7 +34,7 @@ export default function Navbar() {
           <li className="topListItem">
             
             <Link className="link" to={`/posts/?user=${user}`}>
-              My Posts
+              MY POSTS
             </Link>
           </li>
           <li className="topListItem">
@@ -67,7 +67,7 @@ export default function Navbar() {
               </li>
             </ul>
           )}
-          <i className="topSearchIcon fas fa-search"></i>
+          
       </div>
       </div>
   );
