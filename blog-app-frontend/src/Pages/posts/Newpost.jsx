@@ -10,6 +10,7 @@ export default function Newpost() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context)
+  console.log(title);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
