@@ -17,7 +17,11 @@ export default function Register() {
   // const [flag, setFlag] = useState(false);
   const [success, setSuccess] = useState(false);
   const [message, setMessage] = useState("")
-
+ const reset = (e)=>{
+  e.preventDefault();
+  setEmail (null)
+  setPassword (null)
+ }
   const handleSubmit = async (e) => {
     e.preventDefault();
     // setError(false);
@@ -30,13 +34,17 @@ export default function Register() {
       console.log(res)
       setTimeout(() => history.push('/login') , 2000)
       // res.data && window.location.replace("/login");
+
     } catch (err) {
       setMessage("Username, Email and Password are required fields")
       console.log(err.response)
       setError(true); //if we don't have any error and we have data from the use, which means the user successfully registered, he will be directed to login page
       setSuccess(false)
+      //setEmail("")
     }
   };
+
+
   return (
     <Container component="main" maxWidth="xs">
       { error &&
@@ -59,14 +67,14 @@ export default function Register() {
             type="text"
             className="registerInput"
             placeholder="Enter your email..."
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={ (e) => setEmail(e.target.value) }
           />
           <label>Password</label>
           <input
             type="password"
             className="registerInput"
             placeholder="Enter your password..."
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={ (e) => setPassword(e.target.value) }
           />
           <button className="registerButton" type="submit">
             Register
