@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
-import { useState, useEffect } from 'react';
+// import { useState } from "react";
 import "../../css/login.css";
 // import Alert from '@material-ui/lab/Alert';
 // import Container from '@material-ui/core/Container';
@@ -11,7 +11,7 @@ import "../../css/login.css";
 export default function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
     // // const [flag, setFlag] = useState(false);
     // const history= useHistory() 
     // const [success, setSuccess] = useState(false);
