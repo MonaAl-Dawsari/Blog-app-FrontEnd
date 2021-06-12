@@ -40,20 +40,32 @@ It's simply a Blog application that gathers SEI15 students and allows us to shar
 
 ## Images
 ### App Screenchots:
-[Pages](Images/home1.JPG)
-[Pages](Images/about.JPG)
-[Pages](Images/register1.JPG)
-[Pages](Images/login1.JPG)
-[Pages](Images/addPost.JPG)
-[Pages](Images/updateAccount.JPG)
+* page 1 : show a screenshot for Home page.
+![Pages](Images/home1.JPG)
+* page 2 : show a screenshot for About page.
+![Pages](Images/about.JPG)
+* page 3 : show a screenshot for Register page.
+![Pages](Images/register1.JPG)
+* page 4 : show a screenshot for Login page.
+![Pages](Images/login1.JPG)
+* page 5 : show a screenshot for Add post page.
+![Pages](Images/addPost.JPG)
+* page 6 : show a screenshot for Update profile page.
+![Pages](Images/updateAccount.JPG)
 
 
 ### Wireframes:
-[Pages](Images/Home.JPG)
-[Pages](Images/Register.JPG)
-[Pages](Images/login.JPG)
-[Pages](Images/UpdateProfile.JPG)
-[Pages](Images/NewPost.JPG)
+* page 1 : show a wireframe for Home page.
+![Pages](Images/Home.JPG)
+* page 2 : show a wireframe for Register page.
+![Pages](Images/Register.JPG)
+* page 3 : show a wireframe for Login page.
+![Pages](Images/login.JPG)
+* page 4 : show a wireframe for Update profile page.
+![Pages](Images/UpdateProfile.JPG)
+* page 5 : show a wireframe for New Post page.
+![Pages](Images/NewPost.JPG)
+
 
 ### Installation instructions:
 1. Fork and clone the repo
