@@ -20,6 +20,7 @@ export default function Onepost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     const onePost = async () => {
@@ -36,6 +37,7 @@ export default function Onepost() {
     try {
       await axios.delete("http://localhost:5000/blog/v1/posts/" + id);
       //window.location.replace("/posts/");
+      setSuccess(true);
       updateMode(false);
     } catch (err) {}
   };
@@ -103,8 +105,11 @@ export default function Onepost() {
 
           {updateMode && (
             <button className="singlePostButton" onClick={handleUpdate}>
-              Update
+              Update 
             </button>
+          //   <span style={{ color: "green", textAlign: "center", marginTop: "20px" }} >
+          //   your post has been updated successfully
+          // </span>
           )}
         </div>
       </div>

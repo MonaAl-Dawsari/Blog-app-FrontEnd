@@ -13,10 +13,9 @@ It's simply a Blog application that gathers SEI15 students and allows us to shar
 - [Deployed Client]()
 
 ### Planning Story:
-
+After we agrred about the idea of the project, we agreed about the workload for eachone of us then we decided to do the backend first and gave ourselves timeline to finish it during the first 3 days and keep the remaining days to work on the frontend. we also agreed to push the work and merge it everyday before 12 am. we used to meet up everyday to catch up and support each others.
 
 ### User Stories:
-
 1. As a user, I want to be able to sign up with my Email address. so I can create a new post.
 2. As a user, I want to Login to explore the posts of my friends and Logout after I am done.
 3. As a user, I want to create a new post and add a picture to the post.
