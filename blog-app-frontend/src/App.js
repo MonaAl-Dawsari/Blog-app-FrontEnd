@@ -23,22 +23,22 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
-            
+          <Route exact path="/">{<Allposts />}</Route>
             <Route exact path="/About">
               {<About />}
             </Route>
             <Route exact path="/ChangePassword">
               {<ChangePassword />}
             </Route>
-            <Route exact path="/">{<Allposts />}</Route>
+            
 
-            <Route exact path="/register">{user ? <Home /> : <Register />}</Route>
-            <Route exact path="/login"> {user ? <Allposts /> : <Login />}</Route>
-            <Route exact path="/:id">
+            <Route path="/register">{user ? <Home /> : <Register />}</Route>
+            <Route path="/login"> {user ? <Allposts /> : <Login />}</Route>
+            <Route path="/post/:id">
               <Onepost />{" "}
             </Route>
-            <Route exact path="/addpost">{user ? <Newpost /> : <Login />}</Route>
-            <Route exact path="/Profile">{user ? <Profile /> : <Login />}</Route>
+            <Route path="/addpost">{user ? <Newpost /> : <Login />}</Route>
+            <Route path="/Profile">{user ? <Profile /> : <Login />}</Route>
           </Switch>
         </Router>
       </CurrentUserProvider>
