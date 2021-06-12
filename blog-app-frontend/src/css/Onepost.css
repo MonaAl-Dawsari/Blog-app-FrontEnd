@@ -1,5 +1,17 @@
 .singlePost {
-  flex: 9;
+  width: 70%;
+  margin: auto;
+  border: 3px solid #ef476f;
+  border-radius: 10px;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  .singlePost {
+    width: 100%;
+  }
+  .singlePostImg {
+    width: 100%;
+  }
 }
 
 .singlePostWrapper {
@@ -10,9 +22,10 @@
 }
 
 .singlePostImg {
-  width: 100%;
-  height: 300px;
-  border-radius: 5px;
+  width: 50%;
+  height: 200px;
+  margin: auto;
+  border-radius: 10px;
   object-fit: cover;
 }
 

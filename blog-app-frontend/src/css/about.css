@@ -1,0 +1,16 @@
+img {
+  width: "450px";
+  height: "450px";
+}
+
+.carousel p {
+  color: black !important;
+}
+.row-car {
+  padding-left: 10rem;
+}
+@media (max-width: 800px) {
+  .row-car {
+    padding-left: 1rem;
+  }
+}

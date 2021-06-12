@@ -12,11 +12,11 @@ export default function Profile() {
   const [file, setFile] = useState(null);
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
+  //   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
 
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:5000/images/"
+  const PF = "http://localhost:5000/images/";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ export default function Profile() {
       userId: user._id,
       username,
       email,
-    //   password,
+      //   password,
     };
     if (file) {
       const data = new FormData();
@@ -38,7 +38,10 @@ export default function Profile() {
       } catch (err) {}
     }
     try {
-        const res = await axios.put("http://localhost:5000/users/" + user._id, updatedUser);
+      const res = await axios.put(
+        "http://localhost:5000/users/" + user._id,
+        updatedUser
+      );
       setSuccess(true);
       dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
     } catch (err) {
@@ -48,14 +51,14 @@ export default function Profile() {
   return (
     <div className="profile">
       <div className="profileWrapper">
-        <div className="profileTitle">
-          <span className="profileUpdateTitle">Update Your Account</span>
-           </div>
+        <div className="profileTitle alert   text-center pb-3">
+          <span className="profileUpdateTitle ">Update Your Account</span>
+        </div>
         <form className="profileForm" onSubmit={handleSubmit}>
-          <label>Profile Picture</label>
+          <label className="text-center label-pic">Profile Picture</label>
           <div className="profilePP">
             <img
-            // src={user.profile.pic}
+              // src={user.profile.pic}
               src={file ? URL.createObjectURL(file) : PF + user.profileImg}
               alt=""
             />
@@ -72,17 +75,21 @@ export default function Profile() {
           <label>Username</label>
           <input
             type="text"
+            className="form-control"
             placeholder={user.username}
             onChange={(e) => setUsername(e.target.value)}
           />
           <label>Email</label>
           <input
             type="email"
+            className="form-control"
             placeholder={user.email}
             onChange={(e) => setEmail(e.target.value)}
           />
-         <Link to="/changePassword">Change Password </Link>
-           <button className="profileSubmit" type="submit">
+          <Link className="text-dark  btn-change " to="/ChangePassword">
+            Change Password{" "}
+          </Link>
+          <button className="profileSubmit" type="submit">
             Update
           </button>
           {success && (
@@ -94,7 +101,6 @@ export default function Profile() {
           )}
         </form>
       </div>
-     
     </div>
   );
 }
