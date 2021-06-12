@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Description (H3ROES Blog App)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It's simply a Blog application that gathers SEI15 students and allows us to share knowledge, experience and interests in different fields.[Join Us!]()
 
-## Available Scripts
+**Team Members**
+* Ahoud kensara
+* Mona alsaiqal
+* Mona aldawsari
 
-In the project directory, you can run:
+### Important Links:
+- [Backend repo](https://git.generalassemb.ly/alsaiqal/Blog-app-Backend)
+- [Deployed API]() 
+- [Deployed Client]()
 
-### `npm start`
+### Planning Story:
+After we agrred about the idea of the project, we agreed about the workload for eachone of us then we decided to do the backend first and gave ourselves timeline to finish it during the first 3 days and keep the remaining days to work on the frontend. we also agreed to push the work and merge it everyday before 12 am. we used to meet up everyday to catch up and support each others.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### User Stories:
+1. As a user, I want to be able to sign up with my Email address. so I can create a new post.
+2. As a user, I want to Login to explore the posts of my friends and Logout after I am done.
+3. As a user, I want to create a new post and add a picture to the post.
+4. As a user, I want to see my posts, edit or delete them.
+5. As a user, I want to edit my accoun info and change my profile picture.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### Technologies used and packeges: 
++ Reactjs 
++ VS code
++ HTML/Css
++ Context
++ npm i axios
++ npm install --save react-spinners
++ npm i react-router-dom
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### List of unsolved problems which would be fixed in future iterations:
++ User can add new category.
++ User can interact with footer
++ User can reset password
 
-### `npm run build`
+## Images
+### App Screenchots:
+* page 1 : show a screenshot for Home page.
+![Pages](Images/home1.JPG)
+* page 2 : show a screenshot for About page.
+![Pages](Images/about.JPG)
+* page 3 : show a screenshot for Register page.
+![Pages](Images/register1.JPG)
+* page 4 : show a screenshot for Login page.
+![Pages](Images/login1.JPG)
+* page 5 : show a screenshot for Add post page.
+![Pages](Images/addPost.JPG)
+* page 6 : show a screenshot for Update profile page.
+![Pages](Images/updateAccount.JPG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Wireframes:
+* page 1 : show a wireframe for Home page.
+![Pages](Images/Home.JPG)
+* page 2 : show a wireframe for Register page.
+![Pages](Images/Register.JPG)
+* page 3 : show a wireframe for Login page.
+![Pages](Images/login.JPG)
+* page 4 : show a wireframe for Update profile page.
+![Pages](Images/UpdateProfile.JPG)
+* page 5 : show a wireframe for New Post page.
+![Pages](Images/NewPost.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Installation instructions:
+1. Fork and clone the repo
+2. cd my-app
+3. npm install
+4. npm start

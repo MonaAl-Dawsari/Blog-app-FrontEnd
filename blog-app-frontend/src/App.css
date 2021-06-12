@@ -1,22 +1,11 @@
 .app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sweet-loading{
-    
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.yet {
-    color: rgb(206, 31, 31);
-    width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
-   
+.sweet-loading {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

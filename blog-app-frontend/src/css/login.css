@@ -1,60 +1,82 @@
 .login {
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ),
-      url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    background-size: cover;
-  }
-  
-  .loginTitle {
-    font-size: 50px;
-  }
-  
-  .loginForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .loginForm > label {
-    margin: 10px 0;
-  }
-  
-  .loginInput {
-    padding: 10px;
-    background-color: white;
-    border: none;
-  }
-  
-  .loginButton {
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: lightcoral;
-    border: none;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  
-  .loginButton:disabled{
-    cursor: not-allowed;
-    background-color: rgb(252, 173, 173);
-  }
-  
-  .loginRegisterButton {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: teal;
-    cursor: pointer;
-    border: none;
-    padding: 10px;
-    color: white;
-    border-radius: 10px;
-  }
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  font-family: "Roboto";
+}
+.login-card {
+  width: 22rem;
+  padding: 30px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 3px solid #ef476f;
+}
+
+.login-card .loginTitle {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 700px;
+}
+.login-card .loginTitle span {
+  color: #ef476f;
+}
+
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.loginForm > label {
+  margin: 12px;
+  font-weight: 500;
+}
+
+.loginInput {
+  padding: 10px;
+  height: 35px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.loginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+  background-color: #ef476f;
+}
+
+.loginRegisterButton {
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  font-size: 1rem;
+  background-color: #ef476f;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
