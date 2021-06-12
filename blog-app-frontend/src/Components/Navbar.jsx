@@ -65,8 +65,16 @@ export default function Navbar() {
           </Link>
         ) : (
           <ul className="topList">
-            <li className="topListItem"></li>
-            <li className="topListItem"></li>
+            <li className="topListItem">
+              <Link className="btn btn-dark" to="/profile">
+                LOGIN
+              </Link>
+            </li>
+            <li className="topListItem">
+              <Link className="btn btn-dark" to="/register">
+                REGISTER
+              </Link>
+            </li>
           </ul>
         )}
       </div>
