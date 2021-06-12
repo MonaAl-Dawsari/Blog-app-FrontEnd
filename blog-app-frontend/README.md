@@ -2,6 +2,11 @@
 
 It's simply a Blog application that gathers SEI15 students and allows us to share knowledge, experience and interests in different fields.[Join Us!]()
 
+**Team Members**
+* Ahoud kensara
+* Mona alsaiqal
+* Mona aldawsari
+
 ### Important Links:
 - [Backend repo](https://git.generalassemb.ly/alsaiqal/Blog-app-Backend)
 - [Deployed API]() 
@@ -19,15 +24,19 @@ It's simply a Blog application that gathers SEI15 students and allows us to shar
 5. As a user, I want to edit my accoun info and change my profile picture.
 
 
-### Technologies used:
+### Technologies used and packeges: 
 + Reactjs 
 + VS code
 + HTML/Css
 + Context
++ npm i axios
++ npm install --save react-spinners
++ npm i react-router-dom
 
 ### List of unsolved problems which would be fixed in future iterations:
-
 + User can add new category.
++ User can interact with footer
++ User can reset password
 
 ## Images
 ### App Screenchots:
