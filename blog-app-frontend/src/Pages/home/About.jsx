@@ -26,7 +26,7 @@ export default function About() {
         <div class="carousel-inner  text-center">
           <div class="carousel-item active" data-bs-interval="2000">
             <div className="row row-car text-center ml-5">
-              <h5 className="col-md-2 head">Saad iqh2al</h5>
+              <h5 className="col-md-2 head">Saad iqbal</h5>
               <h5 className="col-md-2 ">Sara Kuddah</h5>
               <h5 className="col-md-2 ">Sager Alarifi</h5>
               <h5 className="col-md-2">Yasir Almuhtrish</h5>
