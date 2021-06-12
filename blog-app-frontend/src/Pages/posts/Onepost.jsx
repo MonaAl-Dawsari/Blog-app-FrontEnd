@@ -8,6 +8,8 @@ import axios from 'axios';
 import { Context } from '../../context/Context';
 import Sidebar from '../../Components/Sidebar';
 import { Link } from "react-router-dom";
+import RingLoader from "react-spinners/RingLoader";
+import "../../../src/App.css"
 
 export default function Onepost() {
     const location = useLocation()
@@ -18,14 +20,17 @@ export default function Onepost() {
     const [title, setTitle] = useState("")
     const [desc, setDesc] = useState("")
     const [updateMode, setUpdateMode] = useState(false)
+    const [loading , setLoading] =useState (false)
 
 
     useEffect(() => {
+        setLoading (true)
         const onePost = async () => {
-            const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id, { data: { username: user.username } });
-            setPost(res.data);
-            setTitle(res.data.title);
-            setDesc(res.data.desc);
+        const res = await axios.get("http://localhost:5000/blog/v1/posts/" + id, { data: { username: user.username } });
+        setPost(res.data);
+        setTitle(res.data.title);
+        setDesc(res.data.desc);
+        setLoading (false)
         };
         onePost();
     }, [id]);
@@ -49,10 +54,18 @@ export default function Onepost() {
 
     }
     return (
+        <>
+        <div className="home"> 
+        {
+            loading ? 
 
-        <div className="home">      
+            <div className="sweet-loading">
+              <RingLoader color={"#C63232"} loading={loading}  size={50} />
+            </div> 
 
-        <div className="singlePost">
+            :
+
+            <div className="singlePost">
             
             <div className="singlePostWrapper">
                 {post.photo && (
@@ -101,8 +114,11 @@ export default function Onepost() {
                
             </div>
             </div>
-            <Sidebar />
-        </div>
+        }
+
+        <Sidebar />
+        </div> 
+        </> 
         
     )
 }

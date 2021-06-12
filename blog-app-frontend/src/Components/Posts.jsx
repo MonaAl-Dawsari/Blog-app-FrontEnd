@@ -17,7 +17,7 @@ export default function Posts(props) {
 
 <div className="posts">
   <div className="yet">
-  <p>You Did Not Publish Somethig Yet ... </p>
+  <p>Threre Is Nothing  Yet ... </p>
   </div>
       
       </div>
