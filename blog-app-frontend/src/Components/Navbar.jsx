@@ -26,7 +26,7 @@ export default function Navbar() {
         <ul className="topList">
           <li className="topListItem">
             
-            <Link className="link" to="/posts">
+            <Link className="link" to="/">
             HOME
             </Link>
           </li>
@@ -38,7 +38,7 @@ export default function Navbar() {
 
             
             {/**to={`/posts/?user=${user.username}`} */}
-                <Link className="link"  to={`/posts/?user=${user.username}`} >
+                <Link className="link"  to={`/?user=${user.username}`} >
                   MY POSTS
                 </Link>
               </li>

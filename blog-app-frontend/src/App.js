@@ -21,10 +21,8 @@ function App() {
      <Router>
      <Navbar/>
       <Switch>
+        
         <Route exact path="/">
-         {<Home/> } 
-        </Route>
-        <Route path="/posts">
           {<Allposts/> }
         </Route>
         <Route path="/register">

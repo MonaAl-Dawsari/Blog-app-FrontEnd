@@ -16,6 +16,7 @@ export default function Login() {
     // const history= useHistory() 
     // const [success, setSuccess] = useState(false);
     // const [message, setMessage] = useState("")
+    const [email, setEmail] = useState("");
     const { dispatch, isFetching } = useContext(Context);
 
     const handleSubmit = async (e) => {
@@ -37,7 +38,7 @@ export default function Login() {
             dispatch({ type: "LOGIN_FAILURE" });
         }
     };
-    // console.log(res)
+     console.log(email)
     return (
         // <Container component="main" maxWidth="xs">
         //     { error &&
