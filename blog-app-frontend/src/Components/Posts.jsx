@@ -17,6 +17,7 @@ export default function Posts(props) {
 
 <div className="posts">
   <div className="yet">
+  
   <p>Threre Is Nothing  Yet ... </p>
   </div>
       

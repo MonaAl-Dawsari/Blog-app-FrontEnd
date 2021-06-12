@@ -86,7 +86,7 @@ export default function Onepost() {
           )}
 
           <div className="singlePostInfo">
-            <Link to={`/posts/?user=${post.username}`} className="link">
+            <Link to={`/?user=${post.username}`} className="link">
               <span className=""> {post.username}</span>
             </Link>
             <span className="singlePostDate">
