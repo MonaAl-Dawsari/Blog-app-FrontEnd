@@ -1,4 +1,4 @@
-# Description (Technology Blog App)
+# Description (H3ROES Blog App)
 
 It's simply a Blog application that gathers SEI15 students and allows us to share knowledge, experience and interests in different fields.[Join Us!]()
 
