@@ -8,6 +8,8 @@ import axios from "axios";
 import { Context } from "../../context/Context";
 import Sidebar from "../../Components/Sidebar";
 import { Link } from "react-router-dom";
+import RingLoader from "react-spinners/RingLoader";
+import "../../../src/App.css"
 
 export default function Onepost() {
   const location = useLocation();

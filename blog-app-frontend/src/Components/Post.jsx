@@ -6,9 +6,8 @@ import { useState, useEffect } from "react";
 //import { useContext } from 'react';
 
 export default function Post(props) {
-  //const {user} = useContext(Context);
+  const {user} = useContext(Context);
   const PF = "http://localhost:5000/images/";
-  console.log(props);
   return (
     <div className="post">
       {props.post.photo && (
@@ -20,9 +19,22 @@ export default function Post(props) {
             <span className="postCat">{c.name}</span>
           ))}
         </div>
-        <Link to={`/post/${props.post._id}`} className="link">
+        
+
+
+        { user ? (
+            <>
+            <Link to={`/post/${props.post._id}`} className="link">
           <span className="postTitle">{props.post.title}</span>
         </Link>
+              </>
+          ) :
+          <Link to={`/login`} className="link">
+          <span className="postTitle">{props.post.title}</span>
+        </Link>
+}
+        
+        
         <hr />
         <span className="postDate">
           {new Date(props.post.createdAt).toDateString()}
